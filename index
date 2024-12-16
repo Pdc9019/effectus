@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Moderno</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .carousel-item img {
+      max-height: 70vh; /* Ocupa el 70% de la altura del viewport */
+      object-fit: cover;
+    }
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: #000; /* Color de los indicadores */
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5); /* Controles más visibles */
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<div id="modernCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#modernCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+  </div>
+
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://res.cloudinary.com/dcqznsloe/image/upload/v1705539946/xtek_wmxyne.png" class="d-block w-100" alt="XTEK">
+      <div class="carousel-caption">
+        <h5>XTEK</h5>
+        <p>Innovación y tecnología.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dcqznsloe/image/upload/v1705539946/rammer_m0zvht.png" class="d-block w-100" alt="Rammer">
+      <div class="carousel-caption">
+        <h5>Rammer</h5>
+        <p>Calidad en equipamiento.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dcqznsloe/image/upload/v1705539946/amking_hpaxzj.png" class="d-block w-100" alt="AMKING">
+      <div class="carousel-caption">
+        <h5>AMKING</h5>
+        <p>Soluciones a medida.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dcqznsloe/image/upload/v1705540050/abro_hjsrab.png" class="d-block w-100" alt="EBRO">
+      <div class="carousel-caption">
+        <h5>EBRO</h5>
+        <p>Calidad en acero.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dcqznsloe/image/upload/v1705539946/airnet_yokaiv.png" class="d-block w-100" alt="AIRNET">
+      <div class="carousel-caption">
+        <h5>AIRNET</h5>
+        <p>Conectividad asegurada.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://res.cloudinary.com/dcqznsloe/image/upload/v1705539946/cical_a6ur9u.png" class="d-block w-100" alt="CICAL">
+      <div class="carousel-caption">
+        <h5>CICAL</h5>
+        <p>Infraestructura avanzada.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://qdos.cl/assets/images/logo-329x194.png" class="d-block w-100" alt="QDOS">
+      <div class="carousel-caption">
+        <h5>QDOS</h5>
+        <p>Soluciones integrales.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#modernCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#modernCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+</body>
+</html>
