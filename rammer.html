@@ -1,0 +1,154 @@
+<div id="slider">
+    <!-- Slide 1 -->
+    <div class="slide">
+        <img src="https://github.com/Pdc9019/effectus/blob/main/heroimage.jpg?raw=true" alt="Slider 1">
+        <div class="text-overlay text-right">
+            <div class="text-container">
+                <h2>DESCUBRE NUESTROS <br> PRODUCTOS RAMMER</h2>
+                <p class="narrow-paragraph">
+                    Explora nuestros productos Rammer y descubre la excelencia en martillos hidráulicos. 
+                    Desde martillos de alta tecnología hasta servicios postventa de primera calidad, ofrecemos 
+                    una gama completa para satisfacer todas tus necesidades.
+                </p>
+                <a href="https://www.effectus.cl/productos/rammer" class="btn narrow-paragraph-btn">Ver Productos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <img src="https://github.com/Pdc9019/effectus/blob/main/performanceline_001.gif?raw=true" alt="Slider 2">
+        <div class="text-overlay text-center-left">
+            <div class="text-container">
+                <h2>LOS MARTILLOS RAMMER <br> PERFORMANCE LINE</h2>
+                <p class="narrow-paragraph">
+                    Son tu solución ideal para una amplia gama de necesidades de corte. Diseñados con las 
+                    características y estándares probados de Rammer, los martillos Performance Line ofrecen 
+                    más que una excelente relación potencia-peso, aportan la garantía de calidad que sólo un 
+                    verdadero martillo Rammer puede ofrecer.
+                </p>
+                <a href="https://www.effectus.cl/productos/rammer/martillos-hidr%C3%A1ulicos/performance-line" class="btn narrow-paragraph-btn">Ver Productos</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Contenedor Principal */
+    #slider {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        height: 605px; /* Tamaño fijo */
+        margin: auto;
+        overflow: hidden;
+        background-color: #fff; /* Fondo corporativo blanco */
+        border-radius: 15px; /* Bordes redondeados */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    /* Slides */
+    .slide {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: fade-in-out 8s infinite; /* Transición suave */
+    }
+
+    /* Imágenes */
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Evita distorsión */
+    }
+
+    /* Texto superpuesto */
+    .text-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        color: white;
+        padding: 30px;
+    }
+
+    .text-overlay.text-center-left {
+        justify-content: flex-start; /* Alineación izquierda */
+    }
+
+    .text-container {
+        max-width: 600px;
+    }
+
+    /* Títulos */
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #B1110B; /* Color corporativo original */
+        margin-bottom: 1rem;
+    }
+
+    /* Párrafos */
+    p.narrow-paragraph {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: white;
+    }
+
+    /* Botones */
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #B1110B; /* Color corporativo */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #850D08; /* Un tono más oscuro */
+    }
+
+    /* Animación de transiciones */
+    @keyframes fade-in-out {
+        0%, 100% {
+            opacity: 0.01;
+            transform: scale(1.05); /* Efecto ligero de zoom */
+        }
+        10%, 90% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        const slides = document.querySelectorAll('.slide');
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        showSlide(currentSlide); // Muestra el primer slide
+        setInterval(nextSlide, 12000); // Cambia de slide cada 8 segundos
+    });
+</script>
